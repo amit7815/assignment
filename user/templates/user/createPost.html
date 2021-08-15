@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class='col-lg-4 mx-auto border rounded m-4 p-3'>
+    <form method="post" action="/createpost">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="display-5">Create Your Post Here</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3" required></textarea>
+        </div>
+        <button class="btn btn-outline btn-success">Create Post</button>
+    </form>
+</div>
+{% endblock content %}

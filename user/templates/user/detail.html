@@ -1,0 +1,17 @@
+{% extends 'user/base.html' %}
+{% load crispy_forms_tags %}
+
+{% comment %} {% block title %} blogPost{% endblock tit %} {% endcomment %}
+
+{% block content %}
+<div style="background-color:white;" class="container my-3">
+  <div class="blog-post">
+    <h2 class="blog-post-title"><b>{{post.title}}</b></h2>
+    <p class="blog-post-meta">{{post.timestamp}} by <a href="/about">{{post.author}}</a></p>
+
+    <p>{{post.content}}</p>
+
+
+  </div>
+</div>
+{% endblock content %}
